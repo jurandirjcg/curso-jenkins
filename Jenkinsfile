@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t jurandirjcg/nodeapp:latest .'
+				sh 'docker build --build-arg http_proxy=http://proxy-02.pr.gov.br:8000 -t jurandirjcg/nodeapp:latest .'
 			}
 		}
 
